@@ -19,6 +19,7 @@
 		CC04A52C20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52B20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM */; };
 		CC04A52E20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */; };
 		CC04A53020C14A9000624FD9 /* Result.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */; };
+		CC2F4F9E20C15073008355A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F4F9D20C15073008355A0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		CC04A52B20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
 		CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
 		CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Result.framework.dSYM; sourceTree = "<group>"; };
+		CC2F4F9D20C15073008355A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				CC04A50220C143E700624FD9 /* AppDelegate.swift */,
 				CC04A50420C143E700624FD9 /* ViewController.swift */,
+				CC2F4F9D20C15073008355A0 /* MainView.swift */,
 				CC04A50620C143E700624FD9 /* Main.storyboard */,
 				CC04A50920C143E900624FD9 /* Assets.xcassets */,
 				CC04A50B20C143E900624FD9 /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC04A50520C143E700624FD9 /* ViewController.swift in Sources */,
+				CC2F4F9E20C15073008355A0 /* MainView.swift in Sources */,
 				CC04A50320C143E700624FD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
