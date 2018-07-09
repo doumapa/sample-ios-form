@@ -20,6 +20,10 @@
 		CC04A52E20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */; };
 		CC04A53020C14A9000624FD9 /* Result.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */; };
 		CC2F4F9E20C15073008355A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F4F9D20C15073008355A0 /* MainView.swift */; };
+		CC5F62BE20EF34AE0026960E /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F62BC20EF34AD0026960E /* UIStoryboard+.swift */; };
+		CC5F62BF20EF34AE0026960E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F62BD20EF34AD0026960E /* Storyboard.swift */; };
+		CC5F62C120EF39AB0026960E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5F62C020EF39AB0026960E /* CustomView.xib */; };
+		CC5F62C320EF39C00026960E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F62C220EF39C00026960E /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
 		CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Result.framework.dSYM; sourceTree = "<group>"; };
 		CC2F4F9D20C15073008355A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CC5F62BC20EF34AD0026960E /* UIStoryboard+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
+		CC5F62BD20EF34AD0026960E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		CC5F62C020EF39AB0026960E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		CC5F62C220EF39C00026960E /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,8 @@
 		CC04A50120C143E700624FD9 /* sample-ios-form */ = {
 			isa = PBXGroup;
 			children = (
+				CC5F62BD20EF34AD0026960E /* Storyboard.swift */,
+				CC5F62BC20EF34AD0026960E /* UIStoryboard+.swift */,
 				CC04A50220C143E700624FD9 /* AppDelegate.swift */,
 				CC04A50420C143E700624FD9 /* ViewController.swift */,
 				CC2F4F9D20C15073008355A0 /* MainView.swift */,
@@ -119,6 +129,8 @@
 				CC04A50920C143E900624FD9 /* Assets.xcassets */,
 				CC04A50B20C143E900624FD9 /* LaunchScreen.storyboard */,
 				CC04A50E20C143E900624FD9 /* Info.plist */,
+				CC5F62C020EF39AB0026960E /* CustomView.xib */,
+				CC5F62C220EF39C00026960E /* CustomView.swift */,
 			);
 			path = "sample-ios-form";
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC04A50D20C143E900624FD9 /* LaunchScreen.storyboard in Resources */,
+				CC5F62C120EF39AB0026960E /* CustomView.xib in Resources */,
 				CC04A50A20C143E900624FD9 /* Assets.xcassets in Resources */,
 				CC04A50820C143E700624FD9 /* Main.storyboard in Resources */,
 			);
@@ -278,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5F62BE20EF34AE0026960E /* UIStoryboard+.swift in Sources */,
+				CC5F62BF20EF34AE0026960E /* Storyboard.swift in Sources */,
 				CC04A50520C143E700624FD9 /* ViewController.swift in Sources */,
+				CC5F62C320EF39C00026960E /* CustomView.swift in Sources */,
 				CC2F4F9E20C15073008355A0 /* MainView.swift in Sources */,
 				CC04A50320C143E700624FD9 /* AppDelegate.swift in Sources */,
 			);
