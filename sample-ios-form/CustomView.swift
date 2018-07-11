@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 @IBDesignable
 class CustomView: UIView {
+
+    //MARK: - Outlet properties
 
     @IBOutlet var contentView: UIView!
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
 
-    //MARK: - Inspecable properties
+    //MARK: - Inspectable properties
 
     @IBInspectable var errorColor: UIColor = .red {
         didSet {
@@ -36,7 +40,7 @@ class CustomView: UIView {
                            completion: { _ in
                             //
             })
-
+            
         }
     }
     
@@ -97,23 +101,38 @@ class CustomView: UIView {
     @IBInspectable var invalidBgColor: UIColor = UIColor.red
     @IBInspectable var invalidTextColor: UIColor = UIColor.red
     @IBInspectable var invalidImage: UIImage? = UIImage(named: "form_validation_error")
+    
+    //MARK: - Public properties
+
+    var validationRule: ((_ textField: UITextField) -> Bool?)?
+    var continuousValidationRule: ((_ textField: UITextField) -> Bool?)?
+    
+    let isValid: MutableProperty<Bool?> = MutableProperty(nil)
 
     //MARK: -
+
+    // The view and it's image used to show validation indicators
+    private var rightView: UIView!
+    private var rightImageView: UIImageView!
     
+    //MARK: -
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadNib()
+        setupNib()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        loadNib()
+        setupNib()
     }
     
-    fileprivate func configureForTextField() {
-        
+    fileprivate func setupNib() {
+        loadNib()
+        configureForTextField()
+        bindSignal()
     }
-
+    
     fileprivate func loadNib() {
         let bundle = Bundle(for: type(of: self))
         bundle.loadNibNamed("CustomView", owner: self, options: nil)
@@ -124,6 +143,54 @@ class CustomView: UIView {
         let views = ["contentView" : contentView]
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: views))
+    }
+    
+    fileprivate func configureForTextField() {
+        textField.rightViewMode = .always
+        rightView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        rightImageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 20, height: 20))
+        rightImageView.contentMode = .scaleAspectFit
+        rightView.addSubview(rightImageView)
+        textField.rightView = rightView
+    }
+
+    fileprivate func bindSignal() {
+        textField.reactive.continuousTextValues
+            .take(duringLifetimeOf: self)
+            .skipNil()
+            .skip(while: { (text: String) -> Bool in
+                text.isEmpty
+            })
+            .observeValues { [weak self] (text: String) in
+                guard let continuousValidationRule = self?.continuousValidationRule else { return }
+                self?.validating(valid: continuousValidationRule((self?.textField)!))
+        }
+        textField.reactive.textValues
+            .take(duringLifetimeOf: self)
+            .skipNil()
+            .skip(while: { (text: String) -> Bool in
+                text.isEmpty
+            })
+            .observeValues { [weak self] (text: String) in
+                guard let validationRule = self?.validationRule else { return }
+                self?.validating(valid: validationRule((self?.textField)!))
+        }
+    }
+
+    fileprivate func validating(valid: Bool?) {
+        guard isValid.value != valid else { return }
+        isValid.swap(valid)
+        switch valid {
+        case true?:
+            hideError = true
+            rightImageView.image = validImage
+        case false?:
+            hideError = false
+            rightImageView.image = invalidImage
+        case nil:
+            hideError = true
+            rightImageView.image = nil
+        }
     }
 
     /*
