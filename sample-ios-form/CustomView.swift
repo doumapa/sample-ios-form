@@ -134,8 +134,7 @@ class CustomView: UIView {
     }
     
     fileprivate func loadNib() {
-        let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("CustomView", owner: self, options: nil)
+        Bundle(for: type(of: self)).loadNibNamed("CustomView", owner: self, options: nil)
         guard let contentView = contentView else { return }
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

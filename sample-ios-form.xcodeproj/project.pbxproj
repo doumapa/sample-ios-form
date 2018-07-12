@@ -16,9 +16,9 @@
 		CC04A52420C148D300624FD9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC04A52320C148D300624FD9 /* Result.framework */; };
 		CC04A52620C148EE00624FD9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC04A52520C148ED00624FD9 /* ReactiveSwift.framework */; };
 		CC04A52820C1490300624FD9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC04A52720C1490300624FD9 /* ReactiveCocoa.framework */; };
-		CC04A52C20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52B20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM */; };
-		CC04A52E20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */; };
-		CC04A53020C14A9000624FD9 /* Result.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */; };
+		CC25414220F65C7A00238685 /* ReactiveCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC25414120F65C7A00238685 /* ReactiveCocoa.framework.dSYM */; };
+		CC25414420F65C9400238685 /* ReactiveSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC25414320F65C9400238685 /* ReactiveSwift.framework.dSYM */; };
+		CC25414620F65CB900238685 /* Result.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = CC25414520F65CB800238685 /* Result.framework.dSYM */; };
 		CC2F4F9E20C15073008355A0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F4F9D20C15073008355A0 /* MainView.swift */; };
 		CC5F62BE20EF34AE0026960E /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F62BC20EF34AD0026960E /* UIStoryboard+.swift */; };
 		CC5F62BF20EF34AE0026960E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5F62BD20EF34AD0026960E /* Storyboard.swift */; };
@@ -43,9 +43,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				CC04A53020C14A9000624FD9 /* Result.framework.dSYM in Copy dSYMs */,
-				CC04A52E20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM in Copy dSYMs */,
-				CC04A52C20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM in Copy dSYMs */,
+				CC25414620F65CB900238685 /* Result.framework.dSYM in Copy dSYMs */,
+				CC25414420F65C9400238685 /* ReactiveSwift.framework.dSYM in Copy dSYMs */,
+				CC25414220F65C7A00238685 /* ReactiveCocoa.framework.dSYM in Copy dSYMs */,
 			);
 			name = "Copy dSYMs";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,9 +66,9 @@
 		CC04A52320C148D300624FD9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		CC04A52520C148ED00624FD9 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		CC04A52720C1490300624FD9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		CC04A52B20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
-		CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
-		CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Result.framework.dSYM; sourceTree = "<group>"; };
+		CC25414120F65C7A00238685 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		CC25414320F65C9400238685 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
+		CC25414520F65CB800238685 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Result.framework.dSYM; sourceTree = "<group>"; };
 		CC2F4F9D20C15073008355A0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CC5F62BC20EF34AD0026960E /* UIStoryboard+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 		CC5F62BD20EF34AD0026960E /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				CC04A51620C143E900624FD9 /* sample-ios-formUITests */,
 				CC04A50020C143E700624FD9 /* Products */,
 				CC04A52220C148D200624FD9 /* Frameworks */,
-				CC04A53120C14AE600624FD9 /* dSYMs */,
+				CC25414720F65D1300238685 /* dSYMs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,12 +154,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CC04A53120C14AE600624FD9 /* dSYMs */ = {
+		CC25414720F65D1300238685 /* dSYMs */ = {
 			isa = PBXGroup;
 			children = (
-				CC04A52F20C14A9000624FD9 /* Result.framework.dSYM */,
-				CC04A52D20C14A7A00624FD9 /* ReactiveSwift.framework.dSYM */,
-				CC04A52B20C14A5400624FD9 /* ReactiveCocoa.framework.dSYM */,
+				CC25414520F65CB800238685 /* Result.framework.dSYM */,
+				CC25414320F65C9400238685 /* ReactiveSwift.framework.dSYM */,
+				CC25414120F65C7A00238685 /* ReactiveCocoa.framework.dSYM */,
 			);
 			path = dSYMs;
 			sourceTree = "<group>";
